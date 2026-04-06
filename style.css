@@ -1,0 +1,163 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Body */
+body {
+    background: #0f172a; /* dark navy */
+    color: #e2e8f0;
+    padding: 20px;
+}
+
+/* Headings */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #22c55e; /* green */
+}
+
+h2 {
+    margin-bottom: 10px;
+    color: #38bdf8; /* light blue */
+}
+
+/* Section Card */
+section {
+    background: #1e293b;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* Inputs */
+select, input {
+    padding: 8px;
+    margin: 5px;
+    border-radius: 6px;
+    border: none;
+    background: #334155;
+    color: white;
+}
+
+/* Buttons */
+button {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    background: #22c55e;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #16a34a;
+}
+
+/* Summary Cards */
+#balance {
+    font-size: 22px;
+    font-weight: bold;
+    color: #22c55e; /* green */
+}
+
+#income {
+    color: #4ade80;
+    font-size: 18px;
+}
+
+#expenses {
+    color: #f87171; /* red */
+    font-size: 18px;
+}
+
+/* Chart Boxes */
+canvas {
+    background: #0f172a;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: #020617;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th {
+    background: #22c55e;
+    color: black;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+td {
+    border-bottom: 1px solid #334155;
+}
+
+/* Income / Expense coloring */
+td:nth-child(4) {
+    font-weight: bold;
+}
+
+td:nth-child(4):contains("income") {
+    color: #22c55e;
+}
+
+td:nth-child(4):contains("expense") {
+    color: #ef4444;
+}
+
+/* Admin Section */
+#adminControls {
+    margin-top: 20px;
+    padding: 15px;
+    background: #022c22;
+    border: 1px solid #22c55e;
+    border-radius: 10px;
+}
+
+/* Insights */
+#highestCategory {
+    color: #f87171;
+    font-weight: bold;
+}
+
+#monthlyComparison {
+    color: #38bdf8;
+}
+
+#observation {
+    color: #22c55e;
+}
+
+/* Hover Effects */
+tr:hover {
+    background: #1e293b;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    table, th, td {
+        font-size: 12px;
+    }
+}
+
+canvas {
+    max-width: 500px;
+    margin-top: 10px;
+}
+

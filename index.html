@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<h1>Finance Dashboard</h1>
+
+<!-- Role Selector -->
+<section>
+    <label>Select Role:</label>
+    <select id="role">
+        <option value="viewer">Viewer</option>
+        <option value="admin">Admin</option>
+    </select>
+</section>
+
+<hr>
+
+<!-- Dashboard -->
+<section>
+    <h2>Dashboard Overview</h2>
+
+    <p>Total Balance: <span id="balance">₹0</span></p>
+    <p>Total Income: <span id="income">₹0</span></p>
+    <p>Total Expenses: <span id="expenses">₹0</span></p>
+
+    <h3>Balance Trend</h3>
+    <canvas id="trendChart"></canvas>
+
+    <h3>Spending Breakdown</h3>
+    <canvas id="categoryChart"></canvas>
+</section>
+
+<hr>
+
+<!-- Transactions -->
+<section>
+    <h2>Transactions</h2>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Amount</th>
+                <th>Category</th>
+                <th>Type</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="transactionTable"></tbody>
+    </table>
+
+    <!-- Admin Controls -->
+    <div id="adminControls">
+        <h3>Add Transaction</h3>
+
+        <input type="date" id="date">
+        <input type="number" id="amount" placeholder="Amount">
+        <input type="text" id="category" placeholder="Category">
+
+        <select id="type">
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+        </select>
+
+        <button type="button" onclick="addTransaction()">Add</button>
+    </div>
+</section>
+
+<hr>
+
+<!-- Insights -->
+<section>
+    <h2>Insights</h2>
+    <p id="highestCategory">Highest Spending Category: -</p>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
